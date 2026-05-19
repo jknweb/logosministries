@@ -1,0 +1,96 @@
+.pastor-section {
+  background-color: #f2f2f2 !important;
+}
+
+.pastor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.pastor-image-wrapper {
+  position: relative;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pastor-image {
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
+  filter: contrast(1.1) saturate(1.1);
+}
+
+.pastor-image-accent {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  bottom: 0;
+  left: 2rem;
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  z-index: 1;
+}
+
+.title-underline {
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-gold);
+  margin-bottom: 2rem;
+}
+
+.pastor-section .section-title {
+  color: #222222;
+}
+
+.pastor-title {
+  color: #222222;
+  margin-bottom: 1.5rem;
+}
+
+.pastor-text {
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.pastor-signature {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.signature-name {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+.signature-title {
+  font-size: 0.9rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+  .pastor-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .pastor-image-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Conférence sur le Réveil Spirituel",
+    "date": "15 AOÛT 2026",
+    "thumbnail": "/hero_church_bg_1779019774147.png",
+    "details": "Rejoignez-nous pour 3 jours d'enseignements intensifs, de prière et de démonstration de puissance. Orateurs invités du monde entier viendront partager ce que l'Esprit dit à l'Église aujourd'hui."
+  },
+  {
+    "id": 2,
+    "title": "Retraite des Jeunes (Ecodim & Jeunesse)",
+    "date": "02 SEPT 2026",
+    "thumbnail": "/vision_worship_bg_1779020087875.png",
+    "details": "Une retraite spirituelle en dehors de la ville pour équiper la nouvelle génération. Au programme : Ateliers, feux de camp, louanges acoustiques et enseignements pratiques."
+  },
+  {
+    "id": 3,
+    "title": "Nuit de Prière et de Miracles",
+    "date": "28 SEPT 2026",
+    "thumbnail": "/bgelise.jpeg",
+    "details": "Une nuit entière de prière où nous chercherons la face de Dieu pour nos familles, notre nation et notre destinée. Venez avec de l'attente, Dieu va opérer des miracles."
+  },
+  {
+    "id": 4,
+    "title": "Célébration d'Action de Grâce",
+    "date": "15 OCT 2026",
+    "thumbnail": "/eglise.jpeg",
+    "details": "Un culte spécial dédié à la reconnaissance pour toutes les merveilles accomplies au cours de l'année. Prestations de chorales et temps de témoignages."
+  },
+  {
+    "id": 5,
+    "title": "Séminaire des Couples",
+    "date": "12 NOV 2026",
+    "thumbnail": "/hero_church_bg_1779019774147.png",
+    "details": "Un séminaire axé sur la consolidation du mariage selon le modèle divin. Réservé aux couples mariés et aux fiancés."
+  }
+]

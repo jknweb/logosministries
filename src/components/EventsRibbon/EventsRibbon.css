@@ -1,0 +1,117 @@
+.events-ribbon-section {
+  background-color: #ffffff;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.ribbon-title {
+  background-color: var(--primary-color, #111);
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-family: var(--font-heading, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  padding-left: 280px; /* Espace pour le titre absolu */
+}
+
+.marquee-content {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll-marquee 25s linear infinite;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+.ribbon-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 0.5rem;
+  padding-right: 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  min-width: max-content;
+}
+
+.ribbon-card:hover {
+  transform: scale(1.05);
+  border-color: var(--secondary-color, #c89b3f);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.ribbon-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ribbon-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.ribbon-date {
+  font-size: 0.75rem;
+  color: var(--secondary-color, #c89b3f);
+  font-weight: bold;
+}
+
+.ribbon-event-title {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #111;
+  font-weight: 600;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 1rem)); /* Ajustement pour le gap */
+  }
+}
+
+@media (max-width: 768px) {
+  .ribbon-title {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .events-ribbon-section {
+    flex-direction: column;
+    padding: 0;
+  }
+  .marquee-container {
+    padding-left: 0;
+    padding: 1.5rem 0;
+  }
+}

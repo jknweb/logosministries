@@ -1,0 +1,106 @@
+.footer {
+  background-color: #030303;
+  padding: 5rem 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('/hero_church_bg_1779019774147.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer-col {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 2rem;
+}
+
+.footer-logo span {
+  color: var(--color-gold);
+}
+
+.footer-title, .footer-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+
+.footer-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-off-white);
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  color: #a0a0a0;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer-list li strong {
+  color: var(--color-off-white);
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.footer-contact li {
+  gap: 1rem;
+}
+
+.footer-contact svg {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-line {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+.copyright {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
