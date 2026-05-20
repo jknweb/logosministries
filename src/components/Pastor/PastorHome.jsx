@@ -1,5 +1,5 @@
 import React from 'react';
-import './PastorHome.css';
+import './Pastor.css';
 
 const PastorHome = () => {
   return (
