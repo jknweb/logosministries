@@ -1,7 +1,7 @@
 import React from 'react';
 import './PastorHome.css';
 
-const Pastor = () => {
+const PastorHome = () => {
   return (
     <section className="section pastor-section" id="pasteur">
       <div className="container">
