@@ -16,10 +16,10 @@ const Programs = () => {
           {/* Card 1 */}
           <div className="program-card glass">
             <div className="program-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
             </div>
             <h3 className="program-title">Culte du Dimanche</h3>
-            <div className="program-time">Chaque dimanche à 9h00</div>
+            <div className="program-time">Chaque dimanche à 8h30</div>
             <p className="program-desc">
               Louange, adoration, prédication de la parole, prière et communion fraternelle.
             </p>
@@ -28,10 +28,10 @@ const Programs = () => {
           {/* Card 2 */}
           <div className="program-card glass">
             <div className="program-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /></svg>
             </div>
             <h3 className="program-title">Culte de la Semaine</h3>
-            <div className="program-time">Mardi & Jeudi : 18h30</div>
+            <div className="program-time">Mardi & Jeudi : 17h30</div>
             <p className="program-desc">
               Enseignement approfondi, intercession, édification et moments de réveil.
             </p>
