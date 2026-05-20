@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <Hero />
       <EventsRibbon />
-      <PastorHome />
+      <Pastor />
       <Programs />
       <Teachings />
       <Vision />
