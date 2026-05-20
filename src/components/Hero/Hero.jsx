@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="hero-content animate-fade-in" style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
           <span className="hero-subtitle-top">Bienvenue au Logos Tabernacle Ministries</span>
           <h1 className="hero-title">
-            Alors Pierre, ouvrant la bouche, dit: En vérité, je reconnais que Dieu ne fait point acception de personnes, mais qu`en toute nation celui qui le craint et qui pratique la justice lui est agréable.
+            Dieu ne fait point acception de personnes, mais qu`en toute nation celui qui le craint et qui pratique la justice lui est agréable.
           </h1>
           <div className="hero-actions">
             <Link to="/programs" className="btn btn-primary">Nos Programmes</Link>

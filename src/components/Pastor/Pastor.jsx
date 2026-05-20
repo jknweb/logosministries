@@ -16,7 +16,7 @@ const Pastor = () => {
           </div>
 
           <div className="pastor-content">
-            <h2 className="section-title">Notre Pasteur Visionnaire</h2>
+            <h2 className="section-title">Le Pasteur Visionnaire</h2>
             <div className="title-underline"></div>
 
             <p className="pastor-text">
