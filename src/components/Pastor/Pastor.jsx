@@ -36,8 +36,6 @@ const Pastor = () => {
               <span className="signature-name">Rev. KALOMBO Yves</span>
               <span className="signature-title">Pasteur Principal</span>
             </div>
-
-            <a href="#vision" className="btn btn-primary mt-4">Découvrir sa vision</a>
           </div>
         </div>
       </div>
