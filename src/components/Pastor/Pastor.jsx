@@ -33,7 +33,7 @@ const Pastor = () => {
             <p className="pastor-text">Son parcours spirituel est marqué par une recherche profonde du sens de la vie dès sa jeunesse. Pendant ses années d’études, il a connu une expérience de conversion qui a transformé sa vision de l’existence et orienté toute sa vie vers la prédication de l’Évangile. Selon son témoignage, cette rencontre avec Dieu a fait naître en lui une conviction durable : servir Jésus-Christ et annoncer Sa Parole avec fidélité. </p>
 
             <div className="pastor-signature">
-              <span className="signature-name">Rev. KALOMBO Yves</span>
+              <span className="signature-name">Rév. Yves KALOMBO</span>
               <span className="signature-title">Pasteur Principal</span>
             </div>
           </div>

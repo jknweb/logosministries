@@ -16,7 +16,7 @@ const PastorHome = () => {
           </div>
 
           <div className="pastor-content">
-            <h2 className="section-title">Notre Pasteur Visionnaire</h2>
+            <h2 className="section-title">Le Pasteur Visionnaire</h2>
             <div className="title-underline"></div>
 
             <p className="pastor-text">
@@ -27,7 +27,7 @@ const PastorHome = () => {
             </p>
 
             <div className="pastor-signature">
-              <span className="signature-name">Rev. KALOMBO Yves</span>
+              <span className="signature-name">Rév.Yves KALOMBO </span>
               <span className="signature-title">Pasteur Principal</span>
             </div>
 
