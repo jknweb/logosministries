@@ -6,6 +6,7 @@ import './Hero.css';
 const Hero = () => (
   <section className="hero">
     <div className="hero__bg" aria-hidden="true" />
+    <div className="hero__shade" aria-hidden="true" />
     <div className="container hero__inner">
       <div className="hero__content fade-up">
         <p className="eyebrow">Bienvenue à {site.name}</p>
