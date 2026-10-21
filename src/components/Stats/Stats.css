@@ -26,3 +26,13 @@
   font-size: var(--fs-sm);
   color: var(--c-muted);
 }
+
+.stats--row {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 800px) {
+  .stats--row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

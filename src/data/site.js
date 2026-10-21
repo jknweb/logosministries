@@ -38,6 +38,9 @@ export const socials = [
 
 export const youtubeChannel = 'https://www.youtube.com/@Logosfontaine';
 
+// Page des directs YouTube (bouton LIVE).
+export const liveUrl = `${youtubeChannel}/streams`;
+
 // Sous WordPress : menu « primary » (wp_nav_menu).
 export const navigation = [
   { to: '/', label: 'Accueil' },

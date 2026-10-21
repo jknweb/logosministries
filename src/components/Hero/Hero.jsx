@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import Icon from '../Icon';
+import LiveButton from '../LiveButton/LiveButton';
 import { heroVerse, site } from '../../data/site';
 import './Hero.css';
 
@@ -13,24 +12,13 @@ const Hero = () => (
         <h1 className="hero__title">
           Une famille centrée sur la Parole, <em>depuis {site.foundedYear}.</em>
         </h1>
-        <p className="hero__text">
-          Une église de Kinshasa-Ngaliema où chacun est accueilli, enseigné et accompagné dans sa marche avec Christ.
-          Rejoignez-nous ce dimanche à 8h30.
-        </p>
-        <div className="hero__actions">
-          <Link to="/#visite" className="btn btn--primary">
-            Planifier ma visite
-            <Icon name="arrow" />
-          </Link>
-          <Link to="/enseignements" className="btn btn--ghost">
-            <Icon name="play" />
-            Voir un enseignement
-          </Link>
-        </div>
         <blockquote className="hero__verse">
           <p>« {heroVerse.text} »</p>
           <cite>{heroVerse.reference}</cite>
         </blockquote>
+        <div className="hero__actions">
+          <LiveButton label="Suivre le culte en direct" />
+        </div>
       </div>
     </div>
   </section>

@@ -2,7 +2,7 @@ import { site } from '../../data/site';
 import { schedule } from '../../data/schedule';
 import './Stats.css';
 
-const Stats = () => {
+const Stats = ({ variant = 'grid' }) => {
   const years = new Date().getFullYear() - site.foundedYear;
   const items = [
     { value: site.foundedYear, label: 'Année de fondation' },
@@ -12,7 +12,7 @@ const Stats = () => {
   ];
 
   return (
-    <dl className="stats">
+    <dl className={`stats stats--${variant}`}>
       {items.map((item) => (
         <div className="stats__item" key={item.label}>
           <dt>{item.label}</dt>

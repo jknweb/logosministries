@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero/Hero';
 import QuickInfo from '../components/QuickInfo/QuickInfo';
-import Stats from '../components/Stats/Stats';
+import Welcome from '../components/Welcome/Welcome';
 import ScheduleCards from '../components/ScheduleCards/ScheduleCards';
 import PastorIntro from '../components/PastorIntro/PastorIntro';
 import SermonShowcase from '../components/SermonShowcase/SermonShowcase';
@@ -22,29 +22,7 @@ const Home = () => {
       <Hero />
       <QuickInfo />
 
-      <section className="section section--light">
-        <div className="container split">
-          <div>
-            <p className="eyebrow">Qui sommes-nous</p>
-            <h2 className="heading">D’un salon à Ozone à un temple de 2 500 places</h2>
-            <div className="prose">
-              <p>
-                Logos Tabernacle est née en 1987 d’une campagne d’évangélisation à Ngaliema-Ozone. Les premières
-                réunions se tenaient dans un salon, puis sous un hangar de bambous et de nattes.
-              </p>
-              <p>
-                Aujourd’hui, l’église est une communauté solidement établie, attachée à la foi apostolique et centrée
-                sur la Parole révélée, qui continue d’accueillir chaque semaine celles et ceux qui cherchent Dieu.
-              </p>
-            </div>
-            <Link to="/a-propos" className="link-arrow mt-md">
-              Découvrir notre histoire
-              <Icon name="arrow" size={18} />
-            </Link>
-          </div>
-          <Stats />
-        </div>
-      </section>
+      <Welcome />
 
       <section className="section section--dark">
         <div className="container">

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import LiveButton from '../LiveButton/LiveButton';
 import { navigation, site } from '../../data/site';
 import './Header.css';
 
@@ -62,6 +63,7 @@ const Header = () => {
         </nav>
 
         <div className="site-header__actions">
+          <LiveButton size="sm" />
           <Link to="/#visite" className="btn btn--primary btn--sm site-header__cta">Nous visiter</Link>
           <button
             type="button"

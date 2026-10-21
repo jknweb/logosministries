@@ -1,0 +1,35 @@
+.btn--live {
+  background: #d4202a;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn--live:hover {
+  background: #b81a23;
+  box-shadow: 0 10px 24px rgba(212, 32, 42, 0.35);
+}
+
+.btn--live__dot {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.btn--live__dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #fff;
+  animation: live-pulse 1.6s ease-out infinite;
+}
+
+@keyframes live-pulse {
+  to {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
