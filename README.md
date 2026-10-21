@@ -77,11 +77,9 @@ Le site est une application monopage : toutes les adresses doivent renvoyer vers
 
 Les anciennes adresses en anglais (`/about`, `/pastor`…) redirigent vers les nouvelles adresses en français.
 
-## Contenu à confirmer
+## Contenu à compléter
 
-- Nom officiel à mettre en avant (Logos Tabernacle Ministries ou Logos Fontaine)
-- Adresse e-mail `contact@logostabernacle.com`
-- Liens Facebook, Instagram, TikTok
-- Événements réels à venir (dates, heures, descriptions)
-- Fonctions des pasteurs associés
-- PDF à proposer en téléchargement
+- Liens Facebook, Instagram, TikTok (actuellement `#` dans `site.js`)
+- Fichiers PDF (actuellement `#` dans `sermons.js`, à déposer dans `public/docs/`)
+- Heure de la veillée de la traversée (`events.js`)
+- Adresse e-mail `contact@logostabernacle.com` à confirmer

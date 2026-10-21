@@ -11,7 +11,7 @@ const Contact = () => {
 
   const channels = [
     { icon: 'phone', label: 'Téléphone', value: contact.phone, href: contact.phoneHref },
-    { icon: 'whatsapp', label: 'WhatsApp', value: contact.phone, href: whatsappUrl(), external: true },
+    { icon: 'whatsapp', label: 'WhatsApp', value: contact.whatsappDisplay, href: whatsappUrl(), external: true },
     { icon: 'mail', label: 'E-mail', value: contact.email, href: `mailto:${contact.email}` },
     { icon: 'pin', label: 'Adresse', value: `${contact.address}, ${contact.city}`, href: '#visite' },
   ];

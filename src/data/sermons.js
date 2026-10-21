@@ -8,5 +8,9 @@ export const sermons = [
 ];
 
 // Ressources PDF. La section ne s'affiche que si la liste contient des fichiers.
-// Exemple : { id: 'chants', title: 'Recueil des chants', file: '/docs/recueil-chants.pdf', size: '2,4 Mo' }
-export const resources = [];
+// Déposer les PDF dans public/docs/ puis remplacer les '#' (ex. '/docs/recueil-chants.pdf').
+export const resources = [
+  { id: 'chants', title: 'Recueil des chants', file: '#', size: '2,4 Mo' },
+  { id: 'predications', title: 'Résumé des prédications', file: '#', size: '5,1 Mo' },
+  { id: 'brochure', title: 'Brochure de l’église', file: '#', size: '3,8 Mo' },
+];

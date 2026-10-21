@@ -33,7 +33,7 @@ const Teachings = () => {
             </div>
             <div className="grid grid--3">
               {resources.map((r) => (
-                <a className="card" key={r.id} href={r.file} download>
+                <a className="card" key={r.id} href={r.file} download={r.file !== '#' || undefined}>
                   <span className="card__icon"><Icon name="download" /></span>
                   <h3 className="card__title">{r.title}</h3>
                   <p className="card__text">PDF · {r.size}</p>
