@@ -1,0 +1,70 @@
+.pastor-intro__media {
+  position: relative;
+  max-width: 480px;
+  margin-inline: auto;
+  padding: 0 1.5rem 1.5rem 0;
+}
+
+.pastor-intro__media::after {
+  content: '';
+  position: absolute;
+  inset: 1.5rem 0 0 1.5rem;
+  border: 2px solid var(--c-gold);
+  border-radius: var(--radius-lg);
+  z-index: 0;
+}
+
+.pastor-intro__media img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.pastor-intro__facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm) var(--space-md);
+  margin-block: var(--space-lg);
+  padding-block: var(--space-md);
+  border-block: 1px solid var(--c-line);
+}
+
+.pastor-intro__facts dt {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-gold-deep);
+}
+
+.pastor-intro__facts dd {
+  font-size: var(--fs-sm);
+  color: var(--c-text);
+}
+
+.pastor-intro__signature {
+  margin-bottom: var(--space-md);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--c-ink);
+}
+
+.pastor-intro__signature span {
+  display: block;
+  font-family: var(--font-text);
+  font-size: var(--fs-xs);
+  font-style: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+
+@media (max-width: 560px) {
+  .pastor-intro__facts {
+    grid-template-columns: 1fr;
+  }
+}

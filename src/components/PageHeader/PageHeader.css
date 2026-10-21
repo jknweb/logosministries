@@ -1,0 +1,37 @@
+.page-header {
+  position: relative;
+  padding: calc(var(--header-h) + var(--space-xl)) 0 var(--space-xl);
+  background:
+    linear-gradient(100deg, rgba(11, 11, 12, 0.92) 25%, rgba(11, 11, 12, 0.6)),
+    var(--page-header-image) center / cover no-repeat;
+  color: var(--c-on-dark);
+}
+
+.page-header__crumbs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+  font-size: var(--fs-xs);
+  color: var(--c-on-dark-muted);
+}
+
+.page-header__crumbs a:hover {
+  color: var(--c-gold);
+}
+
+.page-header .eyebrow {
+  color: var(--c-gold);
+}
+
+.page-header__title {
+  font-size: var(--fs-h1);
+  max-width: 760px;
+}
+
+.page-header__intro {
+  max-width: 640px;
+  margin-top: var(--space-sm);
+  font-size: var(--fs-lg);
+  font-weight: 300;
+  color: var(--c-on-dark-muted);
+}

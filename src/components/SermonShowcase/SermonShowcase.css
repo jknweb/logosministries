@@ -1,0 +1,30 @@
+.sermons {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.sermons__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: var(--space-lg);
+}
+
+.sermons__videos {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.sermons__more {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 900px) {
+  .sermons {
+    grid-template-columns: 1fr;
+  }
+}

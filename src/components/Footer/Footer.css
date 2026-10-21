@@ -1,106 +1,116 @@
-.footer {
-  background-color: #030303;
-  padding: 5rem 0 2rem;
-  position: relative;
-  overflow: hidden;
+.site-footer {
+  background: var(--c-ink);
+  color: var(--c-on-dark-muted);
+  padding-block: var(--space-xl) var(--space-md);
+  font-size: var(--fs-sm);
 }
 
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('/hero_church_bg_1779019774147.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.03;
-  pointer-events: none;
-}
-
-.footer-grid {
+.site-footer__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-bottom: 4rem;
+  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-xl);
 }
 
-.footer-col {
-  position: relative;
-  z-index: 2;
-}
-
-.footer-logo {
+.site-footer__brand {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: var(--color-white);
-  margin-bottom: 2rem;
+  color: var(--c-on-dark);
 }
 
-.footer-logo span {
-  color: var(--color-gold);
+.site-footer__brand span {
+  color: var(--c-gold);
 }
 
-.footer-title, .footer-subtitle {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  color: var(--color-gold);
-  margin-bottom: 1.5rem;
+.site-footer__about p {
+  max-width: 340px;
 }
 
-.footer-subtitle {
-  font-size: 1.2rem;
-  color: var(--color-off-white);
-}
-
-.footer-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-list li {
-  color: #a0a0a0;
-  margin-bottom: 0.8rem;
-  font-size: 0.95rem;
+.site-footer__socials {
   display: flex;
-  align-items: center;
+  gap: 0.6rem;
+  margin-top: var(--space-md);
+  list-style: none;
 }
 
-.footer-list li strong {
-  color: var(--color-off-white);
+.site-footer__socials a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--c-line-dark);
+  border-radius: 50%;
+  color: var(--c-on-dark);
+  transition: background-color var(--t-fast), color var(--t-fast), border-color var(--t-fast);
+}
+
+.site-footer__socials a:hover {
+  background: var(--c-gold);
+  border-color: var(--c-gold);
+  color: var(--c-ink);
+}
+
+.site-footer__title {
+  margin-bottom: var(--space-sm);
+  font-size: 1.1rem;
+  color: var(--c-gold);
+}
+
+.site-footer__list {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.site-footer__list a:hover {
+  color: var(--c-gold);
+}
+
+.site-footer__list--schedule li {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.site-footer__list--schedule strong {
+  color: var(--c-on-dark);
   font-weight: 500;
-  margin-right: 0.5rem;
 }
 
-.footer-contact li {
-  gap: 1rem;
+.site-footer__list--contact li {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
 }
 
-.footer-contact svg {
-  color: var(--color-gold);
+.site-footer__list--contact svg {
   flex-shrink: 0;
+  margin-top: 0.25rem;
+  color: var(--c-gold);
 }
 
-.footer-bottom {
-  position: relative;
-  z-index: 2;
+.site-footer__list--contact a {
+  word-break: break-word;
 }
 
-.footer-line {
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
-  margin-bottom: 2rem;
-}
-
-.copyright {
+.site-footer__bottom {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--c-line-dark);
   text-align: center;
-  color: #666;
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
 }
 
-@media (max-width: 768px) {
-  .footer-grid {
+@media (max-width: 960px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-footer__grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
   }
 }

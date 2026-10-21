@@ -1,72 +1,54 @@
-import React from 'react';
-import TeachingsComponent from '../components/Teachings/Teachings';
+import PageHeader from '../components/PageHeader/PageHeader';
+import SermonShowcase from '../components/SermonShowcase/SermonShowcase';
+import VerseBanner from '../components/VerseBanner/VerseBanner';
+import CtaBand from '../components/CtaBand/CtaBand';
+import Icon from '../components/Icon';
+import usePageTitle from '../hooks/usePageTitle';
+import { resources } from '../data/sermons';
 
-const TeachingsPage = () => {
+const Teachings = () => {
+  usePageTitle('Enseignements', 'Prédications et cultes en direct de Logos Tabernacle sur YouTube.');
+
   return (
-    <div className="page-container light-theme" style={{ paddingTop: '100px', paddingBottom: '0' }}>
-      <h1 className="section-title text-center" style={{ marginBottom: '2rem', color: '#111' }}>Replays & Enseignements</h1>
-      <TeachingsComponent />
-      
-      <section className="documents-section" style={{ padding: '4rem 0', backgroundColor: '#f9fafb', marginTop: '3rem' }}>
+    <>
+      <PageHeader
+        eyebrow="Replays"
+        title="Enseignements"
+        intro="Des messages bibliquement fondés pour vous équiper, vous fortifier et vous préparer au retour de Christ."
+        image="/images/ambiance-temple.jpg"
+      />
+
+      <section className="section section--dark-2">
         <div className="container">
-          <h3 className="text-center" style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '3rem', color: '#111' }}>
-            Ressources à Télécharger
-          </h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-            
-            <div className="doc-card" style={{ backgroundColor: 'white', padding: '2rem', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', display: 'flex', alignItems: 'center', gap: '1.5rem', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer' }}>
-              <div style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: '#eef2ff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-color)' }}>
-                <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2v14M14 16l-5-5M14 16l5-5M3 20h18"/></svg>
-              </div>
-              <div>
-                <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem', color: '#111' }}>Recueil des Chants</h4>
-                <p style={{ color: '#666', fontSize: '0.9rem', marginBottom: '0' }}>Format PDF • 2.4 MB</p>
-              </div>
-              <div style={{ marginLeft: 'auto' }}>
-                <span className="doc-badge" style={{ display: 'inline-block', padding: '0.5rem 1rem', borderRadius: '50px', backgroundColor: 'var(--primary-color)', color: 'white', fontSize: '0.85rem', fontWeight: '500', transition: 'background-color 0.3s ease' }}>Télécharger</span>
-              </div>
-            </div>
-
-            <div className="doc-card" style={{ backgroundColor: 'white', padding: '2rem', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', display: 'flex', alignItems: 'center', gap: '1.5rem', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer' }}>
-              <div style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: '#eef2ff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-color)' }}>
-                <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2v14M14 16l-5-5M14 16l5-5M3 20h18"/></svg>
-              </div>
-              <div>
-                <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem', color: '#111' }}>Résumé des Prédications</h4>
-                <p style={{ color: '#666', fontSize: '0.9rem', marginBottom: '0' }}>Format PDF • 5.1 MB</p>
-              </div>
-              <div style={{ marginLeft: 'auto' }}>
-                <span className="doc-badge" style={{ display: 'inline-block', padding: '0.5rem 1rem', borderRadius: '50px', backgroundColor: 'var(--primary-color)', color: 'white', fontSize: '0.85rem', fontWeight: '500', transition: 'background-color 0.3s ease' }}>Télécharger</span>
-              </div>
-            </div>
-
-            <div className="doc-card" style={{ backgroundColor: 'white', padding: '2rem', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', display: 'flex', alignItems: 'center', gap: '1.5rem', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer' }}>
-              <div style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: '#eef2ff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-color)' }}>
-                <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2v14M14 16l-5-5M14 16l5-5M3 20h18"/></svg>
-              </div>
-              <div>
-                <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem', color: '#111' }}>Brochure de l'Église</h4>
-                <p style={{ color: '#666', fontSize: '0.9rem', marginBottom: '0' }}>Format PDF • 3.8 MB</p>
-              </div>
-              <div style={{ marginLeft: 'auto' }}>
-                <span className="doc-badge" style={{ display: 'inline-block', padding: '0.5rem 1rem', borderRadius: '50px', backgroundColor: 'var(--primary-color)', color: 'white', fontSize: '0.85rem', fontWeight: '500', transition: 'background-color 0.3s ease' }}>Télécharger</span>
-              </div>
-            </div>
-
-          </div>
+          <SermonShowcase />
         </div>
-        <style dangerouslySetInnerHTML={{__html: `
-          .doc-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1) !important;
-          }
-          .doc-card:hover .doc-badge {
-            background-color: var(--secondary-color) !important;
-          }
-        `}} />
       </section>
-    </div>
+
+      {resources.length > 0 && (
+        <section className="section section--cream">
+          <div className="container">
+            <div className="section__head section__head--center">
+              <p className="eyebrow">Ressources</p>
+              <h2 className="heading">À télécharger</h2>
+            </div>
+            <div className="grid grid--3">
+              {resources.map((r) => (
+                <a className="card" key={r.id} href={r.file} download>
+                  <span className="card__icon"><Icon name="download" /></span>
+                  <h3 className="card__title">{r.title}</h3>
+                  <p className="card__text">PDF · {r.size}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <VerseBanner text="Ta parole est une lampe à mes pieds, et une lumière sur mon sentier." reference="Psaume 119:105" />
+
+      <CtaBand />
+    </>
   );
 };
 
-export default TeachingsPage;
+export default Teachings;

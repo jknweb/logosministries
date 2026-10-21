@@ -1,0 +1,31 @@
+.cta-band {
+  padding-block: var(--space-xl);
+  background:
+    radial-gradient(circle at 85% 20%, rgba(201, 162, 58, 0.22), transparent 55%),
+    var(--c-ink-2);
+  color: var(--c-on-dark);
+}
+
+.cta-band__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.cta-band__title {
+  font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.25rem);
+  margin-bottom: 0.4rem;
+}
+
+.cta-band__text {
+  max-width: 560px;
+  color: var(--c-on-dark-muted);
+}
+
+.cta-band__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}

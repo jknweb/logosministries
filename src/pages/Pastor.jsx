@@ -1,74 +1,67 @@
-import React from 'react';
-import PastorComponent from '../components/Pastor/Pastor';
+import PageHeader from '../components/PageHeader/PageHeader';
+import PastorIntro from '../components/PastorIntro/PastorIntro';
+import CtaBand from '../components/CtaBand/CtaBand';
+import usePageTitle from '../hooks/usePageTitle';
+import { associatePastors, leadPastor } from '../data/team';
+import './Pastor.css';
 
-const PastorPage = () => {
+const Pastor = () => {
+  usePageTitle('Pasteur', `Biographie du ${leadPastor.name}, fondateur de Logos Tabernacle, et présentation de l’équipe pastorale.`);
+
   return (
-    <div className="page-container light-theme" style={{ paddingTop: '100px', paddingBottom: '4rem' }}>
-      {/* Réutilisation du composant existant pour le pasteur principal */}
-      <PastorComponent />
+    <>
+      <PageHeader
+        eyebrow="Équipe pastorale"
+        title="Le pasteur visionnaire"
+        intro="Découvrez le parcours du Rév. Yves Kalombo et les pasteurs qui l’entourent."
+      />
 
-      {/* Ajout des pasteurs secondaires */}
-      <section className="secondary-pastors" style={{ padding: '4rem 0' }}>
+      <section className="section section--light">
         <div className="container">
-          <h3 className="text-center" style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', marginBottom: '3rem' }}>
-            Nos Pasteurs Associés
-          </h3>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
-            {/* Pasteur 1 */}
-            <div className="glass pastor-card" style={{ padding: '2rem', borderRadius: 'var(--radius-md)', textAlign: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
-              <div className="pastor-avatar" style={{ width: '150px', height: '150px', borderRadius: '50%', backgroundColor: '#eee', margin: '0 auto 1.5rem', overflow: 'hidden', border: '4px solid white', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-                <img src="/gershom.jpg" alt="Pasteur Gershom" className="pastor-img" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} />
-              </div>
-              <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Pasteur Gershom</h4>
-              {/*<p style={{ color: '#666', fontSize: '0.9rem' }}>Enseignement & Formation</p>*/}
-            </div>
-
-            {/* Pasteur 2 */}
-            <div className="glass pastor-card" style={{ padding: '2rem', borderRadius: 'var(--radius-md)', textAlign: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
-              <div className="pastor-avatar" style={{ width: '150px', height: '150px', borderRadius: '50%', backgroundColor: '#eee', margin: '0 auto 1.5rem', overflow: 'hidden', border: '4px solid white', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-                <img src="/joel.jpg" alt="Pasteur Joël" className="pastor-img" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} />
-              </div>
-              <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Pasteur Joël</h4>
-              {/* <p style={{ color: '#666', fontSize: '0.9rem' }}>Évangélisation</p> */}
-            </div>
-
-            {/* Pasteur 3 */}
-            <div className="glass pastor-card" style={{ padding: '2rem', borderRadius: 'var(--radius-md)', textAlign: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
-              <div className="pastor-avatar" style={{ width: '150px', height: '150px', borderRadius: '50%', backgroundColor: '#eee', margin: '0 auto 1.5rem', overflow: 'hidden', border: '4px solid white', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-                <img src="/salem.jpg" alt="Pasteur Salem" className="pastor-img" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} />
-              </div>
-              <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Pasteur Salem</h4>
-              {/* <p style={{ color: '#666', fontSize: '0.9rem' }}>Jeunesse & Ecodim</p> */}
-            </div>
-          </div>
-
-          <style dangerouslySetInnerHTML={{
-            __html: `
-            .pastor-card:hover {
-              transform: translateY(-10px);
-              box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
-            }
-            .pastor-card:hover .pastor-img {
-              transform: scale(1.1);
-            }
-            .pastor-avatar {
-              position: relative;
-              z-index: 1;
-            }
-            .pastor-avatar::after {
-              content: '';
-              position: absolute;
-              top: 0; left: 0; right: 0; bottom: 0;
-              border-radius: 50%;
-              box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
-              pointer-events: none;
-            }
-          `}} />
+          <PastorIntro showLink={false} />
         </div>
       </section>
-    </div>
+
+      <section className="section section--cream">
+        <div className="container container--narrow">
+          <div className="section__head">
+            <p className="eyebrow">Biographie</p>
+            <h2 className="heading">Son parcours</h2>
+          </div>
+          <div className="bio">
+            {leadPastor.bio.map((chapter) => (
+              <article className="bio__chapter" key={chapter.title}>
+                <h3 className="bio__title">{chapter.title}</h3>
+                <div className="prose">
+                  {chapter.paragraphs.map((p) => <p key={p.slice(0, 24)}>{p}</p>)}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--light">
+        <div className="container">
+          <div className="section__head section__head--center">
+            <p className="eyebrow">À ses côtés</p>
+            <h2 className="heading">Nos pasteurs associés</h2>
+          </div>
+          <div className="team">
+            {associatePastors.map((p) => (
+              <article className="team__member" key={p.id}>
+                <img className="team__photo" src={p.photo} alt={`Portrait du ${p.name}`} loading="lazy" />
+                <h3 className="team__name">{p.name}</h3>
+                {p.role && <p className="team__role">{p.role}</p>}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CtaBand />
+    </>
   );
 };
 
-export default PastorPage;
+export default Pastor;
