@@ -19,6 +19,7 @@
 
   --font-heading: 'Cormorant Garamond', Garamond, Georgia, serif; /* titres */
   --font-accent: 'Cinzel', 'Trajan Pro', Georgia, serif; /* surtitres, boutons, logo */
+  --font-verse: 'Marcellus', 'Trajan Pro', Georgia, serif; /* verset du hero */
   --font-text: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif; /* texte courant */
 
   --fs-xs: 0.8rem;
