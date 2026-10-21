@@ -10,7 +10,7 @@ import './Featured.css';
 const Featured = () => (
   <section className="section section--dark featured">
     <div className="container">
-      <div className="section__head">
+      <div className="section__head section__head--center">
         <p className="eyebrow">À la une</p>
         <h2 className="heading">Nourrir votre foi cette semaine</h2>
       </div>

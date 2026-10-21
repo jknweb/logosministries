@@ -1,7 +1,6 @@
 .featured {
-  background:
-    radial-gradient(ellipse at 10% 45%, rgba(201, 162, 58, 0.12), transparent 55%),
-    var(--c-ink);
+  background: var(--c-graphite);
+  text-align: center;
 }
 
 .featured .section__head {
@@ -10,9 +9,14 @@
 
 .featured__grid {
   display: grid;
-  grid-template-columns: 1.7fr 1fr;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  align-items: start;
+  justify-items: center;
+  gap: var(--space-lg);
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.featured__grid .player {
+  width: 100%;
 }
 
 /* Lecteur */
@@ -88,7 +92,9 @@
   bottom: clamp(1rem, 3vw, 1.75rem);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.2rem;
+  text-align: center;
 }
 
 .player__label {
@@ -109,12 +115,16 @@
 /* Colonne latérale */
 .featured__side {
   display: grid;
-  gap: var(--space-md);
+  justify-items: center;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 680px;
 }
 
 .featured__info {
-  padding-bottom: var(--space-md);
-  border-bottom: 1px solid var(--c-line-dark);
+  width: 100%;
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .featured__meta {
@@ -127,13 +137,14 @@
 }
 
 .featured__summary {
-  color: var(--c-on-dark-muted);
+  color: #d6d1c6;
 }
 
 .featured__actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: var(--space-md);
   margin-top: var(--space-md);
 }
@@ -141,12 +152,21 @@
 /* Livre en cours */
 .book {
   display: grid;
-  grid-template-columns: 110px 1fr;
+  justify-items: center;
   gap: var(--space-md);
-  padding: var(--space-md);
-  border: 1px solid var(--c-line-dark);
+  width: 100%;
+  padding: var(--space-lg) var(--space-md);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-lg);
-  background: var(--c-ink-3);
+  background: rgba(11, 11, 12, 0.28);
+}
+
+.book__cover {
+  width: 120px;
+}
+
+.book .link-arrow {
+  justify-content: center;
 }
 
 .book__cover img,
@@ -205,11 +225,16 @@
 
 @media (max-width: 480px) {
   .player__play {
-    width: 66px;
-    height: 66px;
+    top: 42%;
+    width: 58px;
+    height: 58px;
   }
 
-  .book {
-    grid-template-columns: 84px 1fr;
+  .player__label {
+    display: none;
+  }
+
+  .player__title {
+    font-size: 1.2rem;
   }
 }
