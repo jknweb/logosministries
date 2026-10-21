@@ -9,9 +9,7 @@ const Hero = () => (
     <div className="container hero__inner">
       <div className="hero__content fade-up">
         <p className="eyebrow">Bienvenue à {site.name}</p>
-        <h1 className="hero__title">
-          Une famille centrée sur la Parole, <em>depuis {site.foundedYear}.</em>
-        </h1>
+        <h1 className="visually-hidden">{site.name}, église à Kinshasa-Ngaliema</h1>
         <blockquote className="hero__verse">
           <p>« {heroVerse.text} »</p>
           <cite>{heroVerse.reference}</cite>
