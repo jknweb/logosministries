@@ -1,12 +1,12 @@
 import VideoPlayer from './VideoPlayer';
 import LiveButton from '../LiveButton/LiveButton';
 import Icon from '../Icon';
-import { currentBook, featuredVideo } from '../../data/featured';
+import { featuredVideo } from '../../data/featured';
 import { youtubeChannel } from '../../data/site';
 import { formatLongDate } from '../../lib/dates';
 import './Featured.css';
 
-// Section « À la une » : dernière vidéo et livre en cours.
+// Section « À la une » : dernière vidéo mise en ligne.
 const Featured = () => (
   <section className="section section--dark featured">
     <div className="container">
@@ -34,32 +34,6 @@ const Featured = () => (
             </div>
           </div>
 
-          {currentBook && (
-            <article className="book">
-              <div className="book__cover" aria-hidden={!currentBook.cover}>
-                {currentBook.cover ? (
-                  <img src={currentBook.cover} alt={`Couverture : ${currentBook.title}`} loading="lazy" />
-                ) : (
-                  <span className="book__cover-art">
-                    <Icon name="book" size={26} />
-                    <span>{currentBook.title}</span>
-                  </span>
-                )}
-              </div>
-              <div className="book__body">
-                <p className="book__label">Livre en cours</p>
-                <h3 className="book__title">{currentBook.title}</h3>
-                <p className="book__author">{currentBook.author}</p>
-                <p className="book__summary">{currentBook.summary}</p>
-                {currentBook.link && (
-                  <a href={currentBook.link} className="link-arrow" target="_blank" rel="noopener noreferrer">
-                    En savoir plus
-                    <Icon name="arrow" size={18} />
-                  </a>
-                )}
-              </div>
-            </article>
-          )}
         </aside>
       </div>
     </div>
