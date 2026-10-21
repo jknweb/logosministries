@@ -2,6 +2,8 @@
   position: relative;
   z-index: 2;
   margin-top: calc(-1 * var(--space-lg));
+  /* La moitié basse prolonge la section sombre « À la une » qui suit. */
+  background: linear-gradient(transparent var(--space-lg), var(--c-ink) var(--space-lg));
 }
 
 .quick-info__grid {

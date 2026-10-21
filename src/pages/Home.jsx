@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero/Hero';
 import QuickInfo from '../components/QuickInfo/QuickInfo';
+import Featured from '../components/Featured/Featured';
 import Welcome from '../components/Welcome/Welcome';
 import ScheduleCards from '../components/ScheduleCards/ScheduleCards';
 import PastorIntro from '../components/PastorIntro/PastorIntro';
@@ -21,6 +22,8 @@ const Home = () => {
     <>
       <Hero />
       <QuickInfo />
+
+      <Featured />
 
       <Welcome />
 

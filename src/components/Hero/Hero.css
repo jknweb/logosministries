@@ -22,8 +22,8 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/images/temple-interieur.jpg') center bottom / cover no-repeat;
-  transform-origin: 50% 100%;
+  background: url('/images/temple-interieur.jpg') center center / cover no-repeat;
+  transform-origin: 50% 50%;
   will-change: transform, opacity;
   backface-visibility: hidden;
   animation: hero-dolly 28s linear infinite;

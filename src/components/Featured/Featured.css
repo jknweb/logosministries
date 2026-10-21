@@ -1,0 +1,215 @@
+.featured {
+  background:
+    radial-gradient(ellipse at 10% 45%, rgba(201, 162, 58, 0.12), transparent 55%),
+    var(--c-ink);
+}
+
+.featured .section__head {
+  margin-bottom: var(--space-lg);
+}
+
+.featured__grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
+}
+
+/* Lecteur */
+.player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--c-ink-3);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(201, 162, 58, 0.35);
+}
+
+.player iframe,
+.player__poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.player__poster {
+  display: block;
+  text-align: left;
+  color: var(--c-on-dark);
+}
+
+.player__poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 1.2s var(--ease);
+}
+
+.player__poster:hover img {
+  transform: scale(1.07);
+}
+
+.player__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(11, 11, 12, 0.88) 0%, rgba(11, 11, 12, 0.2) 55%, rgba(11, 11, 12, 0.35) 100%);
+}
+
+.player__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  padding-left: 4px;
+  border-radius: 50%;
+  background: var(--c-gold);
+  color: var(--c-ink);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 10px rgba(201, 162, 58, 0.22), 0 18px 40px rgba(0, 0, 0, 0.45);
+  transition: transform var(--t-normal), box-shadow var(--t-normal);
+}
+
+.player__poster:hover .player__play {
+  transform: translate(-50%, -50%) scale(1.08);
+  box-shadow: 0 0 0 16px rgba(201, 162, 58, 0.18), 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.player__caption {
+  position: absolute;
+  left: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.player__label {
+  font-family: var(--font-accent);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+}
+
+.player__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 1rem + 1.5vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+/* Colonne latérale */
+.featured__side {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.featured__info {
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--c-line-dark);
+}
+
+.featured__meta {
+  margin-bottom: var(--space-xs);
+  font-family: var(--font-accent);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+}
+
+.featured__summary {
+  color: var(--c-on-dark-muted);
+}
+
+.featured__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+/* Livre en cours */
+.book {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid var(--c-line-dark);
+  border-radius: var(--radius-lg);
+  background: var(--c-ink-3);
+}
+
+.book__cover img,
+.book__cover-art {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 4px 8px 8px 4px;
+  box-shadow: -4px 0 0 rgba(0, 0, 0, 0.35) inset, 0 12px 24px rgba(0, 0, 0, 0.45);
+  object-fit: cover;
+}
+
+.book__cover-art {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.9rem 0.7rem;
+  background: linear-gradient(160deg, #2a2315, #120f09);
+  border-left: 6px solid var(--c-gold);
+  color: var(--c-gold);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.book__label {
+  font-family: var(--font-accent);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+}
+
+.book__title {
+  margin-top: 0.2rem;
+  font-size: var(--fs-h3);
+}
+
+.book__author {
+  font-size: var(--fs-sm);
+  font-style: italic;
+  color: var(--c-on-dark-muted);
+}
+
+.book__summary {
+  margin-block: var(--space-xs);
+  font-size: var(--fs-sm);
+  color: var(--c-on-dark-muted);
+}
+
+@media (max-width: 960px) {
+  .featured__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .player__play {
+    width: 66px;
+    height: 66px;
+  }
+
+  .book {
+    grid-template-columns: 84px 1fr;
+  }
+}
