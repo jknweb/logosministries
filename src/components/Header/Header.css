@@ -49,15 +49,15 @@
 .brand__name {
   display: flex;
   flex-direction: column;
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-family: var(--font-accent);
+  font-size: 1.05rem;
   font-weight: 600;
+  letter-spacing: 0.04em;
   line-height: 1.1;
 }
 
 .brand__name small {
-  font-family: var(--font-text);
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -172,7 +172,7 @@
     display: block;
     padding: 0.9rem 0;
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     border-bottom: 1px solid var(--c-line-dark);
   }
 
@@ -193,5 +193,29 @@
 
   .brand__name {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header__inner {
+    gap: 0.5rem;
+  }
+
+  .brand {
+    gap: 0.5rem;
+  }
+
+  .brand__badge {
+    width: 44px;
+    height: 38px;
+  }
+
+  .brand__name {
+    font-size: 0.82rem;
+  }
+
+  .site-header__actions .btn--live {
+    min-height: 36px;
+    padding: 0.4rem 0.85rem;
   }
 }

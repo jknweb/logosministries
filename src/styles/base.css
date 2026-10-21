@@ -29,7 +29,8 @@ h3,
 h4 {
   font-family: var(--font-heading);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.12;
+  letter-spacing: -0.005em;
   color: inherit;
 }
 

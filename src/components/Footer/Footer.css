@@ -15,9 +15,9 @@
 .site-footer__brand {
   display: inline-block;
   margin-bottom: var(--space-sm);
-  font-family: var(--font-heading);
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-family: var(--font-accent);
+  font-size: 1.5rem;
+  font-weight: 600;
   color: var(--c-on-dark);
 }
 
@@ -55,7 +55,9 @@
 
 .site-footer__title {
   margin-bottom: var(--space-sm);
-  font-size: 1.1rem;
+  font-family: var(--font-accent);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
   color: var(--c-gold);
 }
 
