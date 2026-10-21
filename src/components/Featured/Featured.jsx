@@ -20,10 +20,20 @@ const Featured = () => (
 
         <aside className="featured__side">
           <div className="featured__info">
-            <p className="featured__meta">
-              {featuredVideo.speaker}
-              {featuredVideo.date && <> · {formatLongDate(featuredVideo.date)}</>}
-            </p>
+            <ul className="featured__meta">
+              {featuredVideo.speaker && (
+                <li>
+                  <Icon name="user" size={18} />
+                  <span><small>Prédicateur</small>{featuredVideo.speaker}</span>
+                </li>
+              )}
+              {featuredVideo.date && (
+                <li>
+                  <Icon name="calendar" size={18} />
+                  <span><small>Date</small>{formatLongDate(featuredVideo.date)}</span>
+                </li>
+              )}
+            </ul>
             <p className="featured__summary">{featuredVideo.summary}</p>
             <div className="featured__actions">
               <LiveButton label="Live" />
