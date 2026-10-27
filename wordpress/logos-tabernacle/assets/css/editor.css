@@ -1,0 +1,17 @@
+/* Aperçu de l'éditeur proche du site. */
+body {
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #26241f;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+  font-weight: 600;
+  line-height: 1.12;
+}
+
+a {
+  color: #85691b;
+}

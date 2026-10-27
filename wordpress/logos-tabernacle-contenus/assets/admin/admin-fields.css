@@ -1,0 +1,56 @@
+/* Champs d'administration Logos Tabernacle. */
+.logos-fields__heading th { padding: 24px 0 4px; }
+.logos-fields__heading h3 { margin: 0; font-size: 1.15em; }
+
+.logos-media__preview img { display: block; max-width: 220px; max-height: 160px; height: auto; border-radius: 6px; border: 1px solid #dcdcde; background: #f6f7f7; }
+.logos-media__default { display: block; margin-top: 4px; color: #646970; font-size: 12px; }
+.logos-media__name { display: inline-block; padding: 4px 8px; background: #f0f0f1; border-radius: 4px; }
+.logos-media__remove { color: #b32d2e; margin-left: 8px; }
+
+.logos-toggle { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+.logos-toggle input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.logos-toggle__ui { position: relative; width: 36px; height: 20px; border-radius: 20px; background: #8c8f94; transition: background .15s; flex-shrink: 0; }
+.logos-toggle__ui::after { content: ''; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: #fff; transition: transform .15s; }
+.logos-toggle input:checked + .logos-toggle__ui { background: #2271b1; }
+.logos-toggle input:checked + .logos-toggle__ui::after { transform: translateX(16px); }
+.logos-toggle input:focus-visible + .logos-toggle__ui { box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2271b1; }
+
+.logos-repeater__rows { margin: 0 0 10px; padding: 0; list-style: none; max-width: 860px; }
+.logos-repeater__row { margin: 0 0 8px; background: #fff; border: 1px solid #dcdcde; border-radius: 6px; }
+.logos-repeater__bar { display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: #f6f7f7; border-bottom: 1px solid #dcdcde; border-radius: 6px 6px 0 0; }
+.logos-repeater__handle { cursor: move; color: #787c82; }
+.logos-repeater__title { flex: 1; font-weight: 600; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.logos-repeater__remove { color: #b32d2e !important; }
+.logos-repeater__fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px 16px; padding: 10px 12px 12px; }
+.logos-repeater__field label { display: block; font-weight: 600; margin-bottom: 4px; }
+.logos-repeater__field input[type=text], .logos-repeater__field input[type=url], .logos-repeater__field textarea, .logos-repeater__field select { width: 100%; }
+.logos-repeater__field--textarea { grid-column: 1 / -1; }
+.logos-repeater__row.ui-sortable-helper { box-shadow: 0 6px 18px rgba(0,0,0,.15); }
+.logos-repeater__row.ui-sortable-placeholder { visibility: visible !important; border: 2px dashed #c3c4c7; background: transparent; }
+
+/* Page d'accueil : sections repliables et réordonnables. */
+.logos-sections { max-width: 980px; margin: 16px 0; padding: 0; list-style: none; }
+.logos-section { margin-bottom: 10px; background: #fff; border: 1px solid #dcdcde; border-radius: 8px; }
+.logos-section__head { display: flex; align-items: center; gap: 10px; padding: 10px 14px; }
+.logos-section__handle { cursor: move; color: #787c82; }
+.logos-section__name { flex: 1; font-size: 14px; font-weight: 600; }
+.logos-section__name small { display: block; font-weight: 400; color: #646970; }
+.logos-section__toggle { display: inline-flex; align-items: center; gap: 4px; }
+.logos-section__toggle .dashicons { transition: transform .15s; }
+.logos-section.is-open .logos-section__toggle .dashicons { transform: rotate(180deg); }
+.logos-section__body { display: none; padding: 0 14px 10px; border-top: 1px solid #f0f0f1; }
+.logos-section.is-open .logos-section__body { display: block; }
+.logos-section.is-off .logos-section__name { color: #8c8f94; }
+.logos-section .form-table th { width: 220px; }
+.logos-sections .ui-sortable-placeholder { visibility: visible !important; border: 2px dashed #c3c4c7; background: transparent; height: 48px; }
+
+.logos-admin-intro { max-width: 860px; font-size: 14px; }
+.logos-admin-tabs { margin-bottom: 8px; }
+
+/* Listes de contenus : poignée de tri. */
+.logos-sort-handle { cursor: move; color: #787c82; }
+.wp-list-table tr.ui-sortable-helper { background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,.15); }
+.wp-list-table tr.ui-sortable-placeholder { visibility: visible !important; outline: 2px dashed #c3c4c7; }
+.column-logos_order { width: 70px; }
+.column-logos_thumb { width: 70px; }
+.column-logos_thumb img { width: 56px; height: 56px; object-fit: cover; border-radius: 6px; }

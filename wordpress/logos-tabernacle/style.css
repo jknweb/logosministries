@@ -1,0 +1,16 @@
+/*
+Theme Name:        Logos Tabernacle
+Theme URI:         https://github.com/jknweb/logosministries
+Author:            Logos Tabernacle Ministries
+Description:       Thème officiel de Logos Tabernacle Ministries (Kinshasa-Ngaliema). Fidèle au site d'origine, entièrement administrable : paramètres du site, en-tête, page d'accueil section par section, pied de page, couleurs et polices. À utiliser avec l'extension « Logos Tabernacle – Contenus » pour les événements, enseignements, horaires, départements, équipe et le formulaire de contact.
+Version:           1.0.0
+Requires at least: 6.2
+Tested up to:      6.8
+Requires PHP:      7.4
+License:           GNU General Public License v2 or later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:       logos-tabernacle
+Tags:              custom-menu, custom-logo, featured-images, translation-ready, one-column, block-styles
+*/
+
+/* Les styles du site sont dans assets/css/site.css (design d'origine) et assets/css/theme.css (ajouts WordPress). */
